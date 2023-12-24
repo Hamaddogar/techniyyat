@@ -1,12 +1,13 @@
 import { Button, Input } from "@/components";
+import { ContinueWith } from "@/components/AuthLayout";
 import ProviderButton from "@/components/Login/ProviderButton";
 import Recaptcha from "@/components/Login/Recaptcha";
 import React from "react";
 
 const page = () => {
   return (
-    <div className="w-full">
-      <div className="w-full p-4 lg:p-12 shadow-2xl h-full">
+    <div className="w-full flex flex-col justify-between">
+      <div className="w-full p-4 h-full lg:p-12 shadow-2xl ">
         <div className="flex flex-col gap-2">
           <h1 className="text-3xl italic">Login</h1>
           <h4 className="text-[#252530]/70 text-xl ">
@@ -23,11 +24,7 @@ const page = () => {
         <div className="w-full mt-5 flex items-center justify-center">
           <Button className="italic" value="Login Account" />
         </div>
-        <div className="flex gap-2 mt-4 items-center">
-          <div className="h-[2px] w-full bg-gray-100" />
-          <span className="text-lg italic min-w-max">Or Continue With</span>
-          <div className="h-[2px] w-full bg-gray-100" />
-        </div>
+        <ContinueWith />
         <div className="flex max-md:flex-col gap-5 mt-5">
           <ProviderButton
             providerImage="/googleIcon.png"
