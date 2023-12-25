@@ -26,7 +26,7 @@ const UserCard = ({
       >
         {status}
       </span>
-      <MoreHorizOutlinedIcon className="border border-[#252530]/30 rounded-full text-[#252530]/30" />
+      <MoreHorizOutlinedIcon className="border order-[#252530]/30 rounded-full text-[#252530]/30" />
     </div>
   );
 };
