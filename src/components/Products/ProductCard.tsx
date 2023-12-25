@@ -14,21 +14,15 @@ const ProductCard = ({
   status: string;
 }) => {
   return (
-    <div className="flex items-center p-4 bg-white border-t border-gray-200 justify-between">
-      <span className="w-full items-center justify-center flex">
-        {productName}
-      </span>
-      <span className="w-full items-center justify-center flex">{vendor}</span>
-      <span className="w-full items-center justify-center flex">
-        {categories}
-      </span>
-      <span className="w-full items-center justify-center flex ml-3">
-        {reviews}
-      </span>
+    <div className="flex items-center py-4 bg-white border-t border-gray-200 justify-between">
+      <span className="">{productName}</span>
+      <span className="">{vendor}</span>
+      <span className="">{categories}</span>
+      <span className="">{reviews}</span>
       <span
         className={`${
           status === "Active" ? "text-[#65D0BD]" : "text-[#EC583C]"
-        } w-full items-center justify-center flex`}
+        } `}
       >
         {status}
       </span>

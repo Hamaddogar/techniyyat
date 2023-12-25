@@ -19,20 +19,12 @@ const page = () => {
         </div>
       </div>
       <div className="text-lg max-lg:text-[11px] flex mb-3 mt-6 justify-between ">
-        <span className="w-full flex items-center ml-3 justify-center">
-          Product Name
-        </span>
-        <span className="w-full justify-center  flex items-center ">
-          Vendor
-        </span>
-        <span className="w-full flex items-center ml-3 justify-center">
-          Categories
-        </span>
-        <span className="w-full flex justify-center items-center ml-3">
-          Reviews
-        </span>
-        <span className="w-full flex items-center ml-7 ">Status</span>
-        <span className="w-full hidden  items-center ml-3 ">Status</span>
+        <span className="w-full">Product Name</span>
+        <span className="w-full ">Vendor</span>
+        <span className="w-full ">Categories</span>
+        <span className="w-full">Reviews</span>
+        <span className="w-full">Status</span>
+        <span className="w-full hidden ">Status</span>
       </div>
       <div className="max-lg:text-[11px]">
         {productsConstant.map((item, i) => (
