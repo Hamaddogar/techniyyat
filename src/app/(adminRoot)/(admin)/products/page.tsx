@@ -1,5 +1,6 @@
 import ProductCard from "@/components/Products/ProductCard";
 import { productsConstant } from "@/constants/ProductsContant";
+import Link from "next/link";
 import React from "react";
 
 const page = () => {
@@ -13,9 +14,12 @@ const page = () => {
           <button className="border px-3 text-sm p-1 rounded-full border-gray-100">
             Select Category
           </button>
-          <button className="border bg-[#EC583C]  text-sm p-2 text-white rounded-full border-gray-100">
+          <Link
+            href={"/create-new-product"}
+            className="border bg-[#EC583C]  text-sm p-2 text-white rounded-full border-gray-100"
+          >
             Add New Product
-          </button>
+          </Link>
         </div>
       </div>
       <div className="text-lg max-lg:text-[11px] flex mb-3 mt-6 justify-between ">

@@ -2,6 +2,7 @@ import { Button, Input } from "@/components";
 import { ContinueWith } from "@/components/AuthLayout";
 import ProviderButton from "@/components/Login/ProviderButton";
 import Recaptcha from "@/components/Login/Recaptcha";
+import Link from "next/link";
 import React from "react";
 
 const page = () => {
@@ -35,8 +36,11 @@ const page = () => {
         <Recaptcha />
       </div>
       <p className=" p-3 text-lg text-[#252530]/70 gap-1 italic font-semibold bottom-0 flex items-center border-t border-gray-200 justify-center bg-white">
-        Already Have an Account?{" "}
-        <span className="text-[#EC583C]"> Login Here</span>
+        Don't Have an Account?{" "}
+        <Link href="/signup-for-registeredUser" className="text-[#EC583C]">
+          {" "}
+          Register Here
+        </Link>
       </p>
     </div>
   );

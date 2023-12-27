@@ -5,7 +5,7 @@ const DropDown = ({ value }: { value: string }) => {
     <div className="relative  border border-gray-200 rounded-lg p-4 text-[#252530]/50 w-full inline-block text-left">
       <button
         type="button"
-        className="w-full flex items-center justify-between font-medium leading-5 text-[#252530]/50 transition duration-150 ease-in-out  rounded-md group "
+        className="w-full outline-none flex items-center justify-between font-medium leading-5 text-[#252530]/50 transition duration-150 ease-in-out  rounded-md group "
       >
         {value}
         <svg

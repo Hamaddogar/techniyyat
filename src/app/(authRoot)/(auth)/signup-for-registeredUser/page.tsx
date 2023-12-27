@@ -1,6 +1,7 @@
 import { Button, Input } from "@/components";
 import { ContinueWith } from "@/components/AuthLayout";
 import ProviderButton from "@/components/Login/ProviderButton";
+import Link from "next/link";
 import React from "react";
 
 const page = () => {
@@ -32,7 +33,10 @@ const page = () => {
       </div>
       <p className=" p-3 text-lg text-[#252530]/70 gap-1 italic font-semibold bottom-0 flex items-center border-t border-gray-200 justify-center bg-white">
         Already Have an Account?{" "}
-        <span className="text-[#EC583C]"> Login Here</span>
+        <Link href="/signup-for-rcm" className="text-[#EC583C]">
+          {" "}
+          Login Here
+        </Link>
       </p>
     </div>
   );

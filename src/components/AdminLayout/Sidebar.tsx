@@ -10,7 +10,12 @@ const Sidebar = () => {
         <CreateNewButton />
         <div className="flex flex-col gap-7">
           {sidebarConstant.map((item: any) => (
-            <SidebarLink key={item.link} path={item.name} Icon={item.icon} />
+            <SidebarLink
+              link={item.link}
+              key={item.link}
+              path={item.name}
+              Icon={item.icon}
+            />
           ))}
         </div>
       </div>
