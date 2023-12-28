@@ -3,4 +3,12 @@ import Navbar from "./Navbar";
 import DomainCard from "./DomainCard";
 import Testimonial from "./Testimonial";
 import FeaturedProductCard from "./FeaturedProductCard";
-export { Banner, Navbar, DomainCard, Testimonial, FeaturedProductCard };
+import MobileSideDrawer from "./MobileSideDrawer";
+export {
+  Banner,
+  Navbar,
+  DomainCard,
+  Testimonial,
+  FeaturedProductCard,
+  MobileSideDrawer,
+};

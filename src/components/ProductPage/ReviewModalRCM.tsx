@@ -47,7 +47,7 @@ const ReviewModalRCM = ({
                   >
                     Write a Review
                   </Dialog.Title>
-                  <div className="mt-4 w-full pt-12 gap-6 flex items-center ">
+                  <div className="mt-4 w-full max-md:flex-col pt-12 gap-6 flex items-center ">
                     <img className="h-[140px] w-[140px] " src="/cisco800.png" />
                     <div className="space-y-3 flex flex-col items-start ">
                       <p className="text-[#EC583C]">
