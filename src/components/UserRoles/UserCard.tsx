@@ -14,7 +14,7 @@ const UserCard = ({
   status: string;
 }) => {
   return (
-    <div className="flex text-[#252530]/70 items-center p-4 bg-white border-t border-gray-200 justify-between">
+    <div className="flex max-md:flex-col max-md:gap-2 text-[#252530]/70 items-center p-4 bg-white border-t border-gray-200 justify-between">
       <span>{username}</span>
       <span>{email}</span>
       <span>{phone}</span>

@@ -4,7 +4,7 @@ import { sidebarConstant } from "@/constants/SidebarConstants";
 
 const Sidebar = () => {
   return (
-    <div className="w-[20%]  p-6">
+    <div className="w-[20%] max-md:hidden p-6">
       <div className="flex items-center flex-col gap-8">
         <img className="w-36  bg-transparent" src="/logo.png" />
         <CreateNewButton />

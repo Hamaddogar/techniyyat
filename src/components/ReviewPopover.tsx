@@ -11,7 +11,7 @@ const ReviewPopover = () => {
     <>
       <Popover className="relative">
         <Popover.Button className="outline-none">
-          <MoreHorizOutlinedIcon className="border border-[#252530]/30 rounded-full text-[#252530]/30" />
+          <MoreHorizOutlinedIcon className="border ml-1 border-[#252530]/30 rounded-full text-[#252530]/30" />
         </Popover.Button>
 
         <Popover.Panel className="absolute border border-gray-200 shadow-xl text-[#252530]/50 right-2 w-[200px] z-10 bg-white p-4 rounded-2xl">

@@ -26,7 +26,7 @@ const ProductCard = ({
       >
         {status}
       </span>
-      <MoreHorizOutlinedIcon className="border border-[#252530]/30 rounded-full text-[#252530]/30" />
+      <MoreHorizOutlinedIcon className="border max-md:hidden border-[#252530]/30 rounded-full text-[#252530]/30" />
     </div>
   );
 };

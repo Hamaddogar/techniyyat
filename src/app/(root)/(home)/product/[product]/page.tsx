@@ -42,14 +42,14 @@ const page = () => {
     setIsReviewRCMOpen(true);
   };
   return (
-    <div className="relative">
+    <div className="relative  ">
       <img className="w-full h-[200px] object-cover " src="/Banner.png" />
-      <div className="max-w-[1440px] mx-auto ">
+      <div className="max-w-[1440px] p-2 mx-auto ">
         <ProductDetail
           openReviewRCMModal={openReviewRCMModal}
           openModal={openModal}
         />
-        <div className="flex gap-5">
+        <div className="flex w-full max-md:flex-col gap-5">
           <div className="w-full">
             <div className="mt-16 space-y-10 ">
               <HeadingAndDesc

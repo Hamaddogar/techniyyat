@@ -18,7 +18,7 @@ const ReviewRequest = () => {
           </div>
           <p className="text-[#252530]/70 max-lg:text-xs">Hosting Provider</p>
           <div className="flex gap-1 items-center">
-            <span className="bg-[#EC583C] p-[2px] px-[6px] pr-[7px] text-xs italic text-white rounded-full">
+            <span className="bg-[#EC583C] max-md:hidden p-[2px] px-[6px] pr-[7px] text-xs italic text-white rounded-full">
               8
             </span>
             <span className="text-[#EC583C] max-lg:text-xs">Suggestions</span>
@@ -28,7 +28,7 @@ const ReviewRequest = () => {
       </Disclosure.Button>
       <Disclosure.Panel className="text-gray-500 px-2 flex items-center gap-3">
         <CloseOutlinedIcon
-          className="border p-[2px] rounded-lg border-[#EC583C]"
+          className="border  p-[2px] rounded-lg border-[#EC583C]"
           sx={{ color: "#EC583C" }}
         />
         <span className="text-[#252530]/50 ">

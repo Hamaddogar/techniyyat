@@ -9,7 +9,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
         <Sidebar />
         <div className="w-full">
           <Navbar />
-          <div className="w-full p-8 min-h-screen rounded-l-xl bg-[#f9f9f9]">
+          <div className="w-full p-2 md:p-8 min-h-screen rounded-l-xl bg-[#f9f9f9]">
             {children}
           </div>
         </div>

@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div className="bg-white p-7 rounded-xl">
       <div className="flex items-center justify-between border-b border-gray-200 ">
-        <div className="flex max-lg:text-[11px] gap-5 text-lg text-[#252530]/50 mb-4">
+        <div className="flex max-md:leading-none max-lg:text-[11px] gap-5 text-lg text-[#252530]/50 mb-4">
           <h3>Normal Users</h3>
           <h3>Vendors</h3>
           <h3>Review Committee Members</h3>
@@ -20,7 +20,7 @@ const page = () => {
           </button>
         </div>
       </div>
-      <div className="text-lg max-lg:text-[11px] flex mb-3 mt-6 justify-between ">
+      <div className="text-lg max-md:hidden max-lg:text-[11px] flex mb-3 mt-6 justify-between ">
         <span className="w-full flex items-center ml-3">User Name</span>
         <span className="w-full  flex items-center ml-3">Email Address</span>
         <span className="w-full flex items-center ml-3">Phone Number</span>

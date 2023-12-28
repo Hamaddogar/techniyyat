@@ -10,9 +10,9 @@ const ProductDetail = ({
 }) => {
   return (
     <div className="flex w-full mx-auto items-center justify-center">
-      <div className=" items-end  flex w-full justify-between  mx-auto ">
+      <div className=" items-end max-md:flex-col max-md:gap-4 max-md:items-center flex w-full justify-between  mx-auto ">
         <div className="flex gap-4   items-end">
-          <img className="" src="/cisco800.png" />
+          <img className="max-md:w-[120px]" src="/cisco800.png" />
           <div className="space-y-3 -mt-2 ">
             <h1 className="text-2xl">Cisco 800 Series Router</h1>
             <div className="flex -mt-2 items-center gap-4">

@@ -11,7 +11,7 @@ const page = () => {
         </div>
       </div>
       <div className="pt-5">
-        <div className="p-5 flex flex-col gap-5">
+        <div className="md:p-5 p-1 flex flex-col gap-5">
           <ReviewRequest />
           <ReviewRequest />
           <ReviewRequest />

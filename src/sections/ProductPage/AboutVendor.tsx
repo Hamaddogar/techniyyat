@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutVendor = () => {
   return (
-    <div className=" max-h-max rounded-xl w-[70%]  ">
+    <div className=" max-h-max rounded-xl md:w-[70%]  ">
       <div className="bg-[#FDF5F4] space-y-6 rounded-xl p-6 ">
         <h2 className="text-[#EC583C]  italic text-xl font-semibold">
           About Vendor
