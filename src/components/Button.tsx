@@ -12,6 +12,7 @@ const Button = ({
 }) => {
   return (
     <button
+      onClick={onClick ? onClick : ""}
       {...props}
       className={`${className} text-white rounded-full text-md p-3 px-5 bg-[#EC583C]`}
     >
