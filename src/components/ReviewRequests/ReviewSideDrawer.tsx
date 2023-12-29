@@ -22,6 +22,7 @@ const ReviewSideDrawer = ({
   return (
     <React.Fragment>
       <Drawer
+        placeholder={""}
         size={400}
         placement="right"
         open={isDrawerOpen}
@@ -30,6 +31,7 @@ const ReviewSideDrawer = ({
       >
         <div className="mb-6 z-50 flex items-center justify-between">
           <IconButton
+            placeholder={""}
             className="w-full flex items-end justify-end"
             variant="text"
             color="blue-gray"

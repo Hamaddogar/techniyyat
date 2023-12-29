@@ -3,10 +3,12 @@ import React from "react";
 const Button = ({
   value,
   className = "",
+  onClick,
   ...props
 }: {
   value: string;
   className?: string;
+  onClick?: any;
 }) => {
   return (
     <button

@@ -21,6 +21,7 @@ const MobileSideDrawer = ({
   return (
     <React.Fragment>
       <Drawer
+        placeholder={""}
         placement="right"
         open={isDrawerOpen}
         onClose={closeDrawer}
@@ -28,6 +29,7 @@ const MobileSideDrawer = ({
       >
         <div className="mb-6 z-50 flex items-center justify-between">
           <IconButton
+            placeholder={""}
             className="w-full flex items-end justify-end"
             variant="text"
             color="blue-gray"
