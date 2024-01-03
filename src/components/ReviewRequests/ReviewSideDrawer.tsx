@@ -1,13 +1,8 @@
 "use client";
 import React from "react";
 
-import {
-  Drawer,
-  Button,
-  Typography,
-  IconButton,
-} from "@material-tailwind/react";
-import { HomeNavbarConstant } from "@/constants/HomeNavbarConstants";
+import { Drawer, IconButton } from "@material-tailwind/react";
+
 import { ReviewCard } from ".";
 
 const ReviewSideDrawer = ({
@@ -27,7 +22,7 @@ const ReviewSideDrawer = ({
         placement="right"
         open={isDrawerOpen}
         onClose={closeSideDrawer}
-        className="p-4 z-50 min-h-screen "
+        className="p-4 shadow-lg z-50 min-h-screen "
       >
         <div className="mb-6 z-50 flex items-center justify-between">
           <IconButton

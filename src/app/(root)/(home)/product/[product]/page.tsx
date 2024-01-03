@@ -1,13 +1,15 @@
 "use client";
-import { Button } from "@/components";
+import { Button, DisclosureComp } from "@/components";
 import {
   HeadingAndDesc,
   ProductDetail,
+  ProductDetailCard,
   ProductSuggestion,
   ReviewModalRCM,
   SubmitReviewDialog,
   SuggestionUnderReview,
 } from "@/components/ProductPage";
+import { productDetailsConstants } from "@/constants/ProductDetails";
 import { AboutVendor, Reviews, SuggestSection } from "@/sections/ProductPage";
 
 import React, { useState } from "react";
@@ -51,44 +53,46 @@ const page = () => {
         />
         <div className="flex w-full max-md:flex-col gap-5">
           <div className="w-full">
-            <div className="mt-16 space-y-10 ">
-              <HeadingAndDesc
-                heading="About Product"
-                desc="Hostwinds provides dependable cloud solutions at a competitive price. Since founded in 2010, our primary compassion has been providing the best customer service and products to worldwide hosting customers. Our professional support remains available to our customers 24/7 and boasts a 99.9999% uptime guarantee. Hostwinds customers can rest assured knowing their hosting remains in dependable hands. Do you have limited space, but need best-in-class routing, voice and video, security, application performance, cloud connection, and wireless capabilities? Cisco 800 Series routers offer all that in a single device. They are well suited for customer premises and priced for small and midsize businesses."
+            <div className="mt-16 space-y-4 ">
+              <DisclosureComp
+                desc="Hostwinds provides dependable cloud solutions at a competitive price. Since founded in 2010, our primary compassion has been providing the best customer service and products to worldwide hosting customers. Our professional support remains available to our customers 24/7 and boasts a 99.9999% uptime guarantee. Hostwinds customers can rest assured knowing their hosting remains in dependable hands."
+                title="What is TechCloud Services?"
               />
-              <HeadingAndDesc
-                heading="Product Specification"
-                desc="Hostwinds provides dependable cloud solutions at a competitive price. Since founded in 2010, our primary compassion has been providing the best customer service and products to worldwide hosting customers. Our professional support remains available to our customers 24/7 and boasts a 99.9999% uptime guarantee. Hostwinds customers can rest assured knowing their hosting remains in dependable hands. Do you have limited space."
+              <DisclosureComp
+                desc="Hostwinds provides dependable cloud solutions at a competitive price. Since founded in 2010, our primary compassion has been providing the best customer service and products to worldwide hosting customers. Our professional support remains available to our customers 24/7 and boasts a 99.9999% uptime guarantee. Hostwinds customers can rest assured knowing their hosting remains in dependable hands."
+                title="Product Description"
               />
-              <Button
-                onClick={openProductSuggestion}
-                className="bg-white border !p-2 !px-4 border-[#EC583C] !text-[#EC583C]"
-                value="Suggest Section"
-              />
+              <div className="flex w-full border border-gray-100 rounded-lg p-4 justify-between items-center">
+                <h1 className="text-2xl font-semibold">
+                  Pricing Starting From
+                </h1>
+                <h2 className="text-[#EC583C] text-lg font-semibold ">
+                  $12.49/Month
+                </h2>
+              </div>
             </div>
-            <div className=" mt-6 ">
-              <SuggestSection openSuggestion={openSuggestion} />
-              <SuggestionUnderReview
-                closeSuggestion={closeSuggestion}
-                suggestionIsOpen={suggestionIsOpen}
-              />
+            {/* Product Details */}
+            <div className="flex mt-20 flex-col">
+              <h1 className="text-2xl font-semibold">Product Details</h1>
+              <div className="flex max-md:flex-col mt-4 gap-4">
+                {productDetailsConstants.map((item) => (
+                  <ProductDetailCard
+                    badgeContent={3}
+                    desc={item.desc}
+                    title={item.title}
+                    logo={item.logo}
+                  />
+                ))}
+              </div>
             </div>
-            <div>
+
+            <div className="mt-8">
               <Reviews />
             </div>
           </div>
-          <AboutVendor />
         </div>
       </div>
       <SubmitReviewDialog closeModal={closeModal} isOpen={isOpen} />
-      <ProductSuggestion
-        isProductSuggestionOpen={isProductSuggestionOpen}
-        closeProductSuggestion={closeProductSuggestion}
-      />
-      <ReviewModalRCM
-        closeReviewRCMModal={closeReviewRCMModal}
-        isReviewRCMOpen={isReviewRCMOpen}
-      />
     </div>
   );
 };

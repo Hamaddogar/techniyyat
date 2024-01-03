@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="flex p-4  items-center justify-between">
         <div className="flex items-center w-full mx-auto max-w-[1400px] justify-between">
           <Link href="/">
-            <img className="w-[150px]" src="/logo.png" />
+            <img className="w-[150px]" src="/techniyyat-logo.png" />
           </Link>
           <div className="flex max-lg:hidden items-center gap-5">
             {HomeNavbarConstant.map((item) => (

@@ -1,4 +1,4 @@
-import VendorCard from "@/components/Vendors/VendorCard";
+import { VendorCard } from "@/components/Vendors";
 import { vendorsConstants } from "@/constants/VendorsConstants";
 import React from "react";
 

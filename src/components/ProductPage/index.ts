@@ -5,6 +5,7 @@ import SuggestionUnderReview from "./SuggestionUnderReview";
 import ProductSuggestion from "./ProductSuggestion";
 import ProductSpecReviewCard from "./ProductSpecReviewCard";
 import ReviewModalRCM from "./ReviewModalRCM";
+import ProductDetailCard from "./ProductDetailCard";
 export {
   HeadingAndDesc,
   ProductDetail,
@@ -13,4 +14,5 @@ export {
   ProductSuggestion,
   ProductSpecReviewCard,
   ReviewModalRCM,
+  ProductDetailCard,
 };

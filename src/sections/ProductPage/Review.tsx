@@ -2,7 +2,7 @@ import React from "react";
 
 const Review = () => {
   return (
-    <div className="border p-3  border-[#252530]/10 ">
+    <div className="border bg-white p-3  border-[#252530]/10 ">
       <div className="flex border-b px-4 border-[#252530]/10 gap-3 p-4">
         {" "}
         <img
