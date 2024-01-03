@@ -9,9 +9,9 @@ import React from "react";
 
 const FeaturedProductsLaunching = () => {
   return (
-    <div className="flex justify-between w-full mx-auto max-w-[1480px] items-center">
+    <div className="flex p-3 max-md:flex-col gap-4 justify-between w-full mx-auto max-w-[1480px] items-center">
       <div className="flex  flex-col">
-        <h1 className="text-[2vw] font-semibold">
+        <h1 className="text-[2vw] max-md:text-[3vw] font-semibold">
           Featured Products Launching Today
         </h1>
         <div className="flex mt-4 flex-col gap-5">
