@@ -1,5 +1,5 @@
 "use client";
-import { HomeNavbarConstant } from "@/constants/HomeNavbarConstants";
+import { homeNavbarConstants } from "@/constants/HomeNavbarConstants";
 import React, { useState } from "react";
 import { Button } from "..";
 import Link from "next/link";
@@ -19,8 +19,8 @@ const Navbar = () => {
             <img className="w-[150px]" src="/techniyyat-logo.png" />
           </Link>
           <div className="flex max-lg:hidden items-center gap-5">
-            {HomeNavbarConstant.map((item) => (
-              <span>{item}</span>
+            {homeNavbarConstants.map((item) => (
+              <Link href={item.href}>{item.name}</Link>
             ))}
           </div>
           <div className="flex items-center gap-2">

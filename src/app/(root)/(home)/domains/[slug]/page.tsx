@@ -22,8 +22,13 @@ const page = () => {
       <div className="space-y-4 p-7">
         <h2 className="font-semibold italic text-lg">Sub Domains</h2>
         <div className="grid md:grid-cols-4  w-full place-items-center grid-cols-2 lg:grid-cols-5 xl:grid-cols-7 gap-3">
-          {subdomainConstants.map((item) => (
-            <SubdomainCard src={item.src} name={item.name} />
+          {subdomainConstants.map((item, i) => (
+            <SubdomainCard
+              key={i}
+              href={"/product/num"}
+              src={item.src}
+              name={item.name}
+            />
           ))}
         </div>
       </div>

@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="absolute p-7 flex items-center justify-between w-full top-0">
       <div className="flex gap-5 items-center">
-        <Link href="/hackathon-home">
+        <Link href="/hackathon">
           <img src="/hackathon-logo.png" />
         </Link>
         <div className="flex gap-4">

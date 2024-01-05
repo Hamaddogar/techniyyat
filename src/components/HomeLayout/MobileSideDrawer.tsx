@@ -7,7 +7,8 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-import { HomeNavbarConstant } from "@/constants/HomeNavbarConstants";
+import { homeNavbarConstants } from "@/constants/HomeNavbarConstants";
+import Link from "next/link";
 
 const MobileSideDrawer = ({
   isDrawerOpen,
@@ -54,8 +55,10 @@ const MobileSideDrawer = ({
         <div>
           {
             <div className="flex gap-5 text-lg flex-col">
-              {HomeNavbarConstant.map((item) => (
-                <span>{item}</span>
+              {homeNavbarConstants.map((item, i) => (
+                <Link key={i} href={item.href}>
+                  {item.name}
+                </Link>
               ))}
             </div>
           }
