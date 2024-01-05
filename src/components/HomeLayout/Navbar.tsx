@@ -24,7 +24,10 @@ const Navbar = () => {
             ))}
           </div>
           <div className="flex items-center gap-2">
-            <MenuOutlinedIcon onClick={openDrawer} className="lg:hidden " />
+            {/* <MenuOutlinedIcon
+              onClick={openDrawer}
+              className="max-lg:flex hidden "
+            /> */}
             <Button
               onClick={() => router.push("/login")}
               className="bg-white border max-md:text-[9px] !p-2 !px-3 border-[#EC583C] !text-[#EC583C]"
