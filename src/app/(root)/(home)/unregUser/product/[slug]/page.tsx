@@ -51,7 +51,6 @@ const page = () => {
       <img className="w-full h-[200px] object-cover " src="/Banner.png" />
       <div className="max-w-[1440px] p-2 mx-auto ">
         <ProductDetail
-          noSuggestButtons
           openReviewRCMModal={openReviewRCMModal}
           openModal={openModal}
         />

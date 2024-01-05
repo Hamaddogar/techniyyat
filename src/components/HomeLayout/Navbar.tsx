@@ -1,16 +1,17 @@
 "use client";
 import { homeNavbarConstants } from "@/constants/HomeNavbarConstants";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "..";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { MobileSideDrawer } from ".";
+
 const Navbar = () => {
-  const router = useRouter();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const openDrawer = () => setIsDrawerOpen(true);
   const closeDrawer = () => setIsDrawerOpen(false);
+
   return (
     <>
       <div className="flex p-4  items-center justify-between">
@@ -26,13 +27,14 @@ const Navbar = () => {
           <div className="flex items-center gap-2">
             {/* <MenuOutlinedIcon
               onClick={openDrawer}
-              className="max-lg:flex hidden "
+              style={{ display: drawerDisabled ? "flex" : "hidden" }}
             /> */}
-            <Button
-              onClick={() => router.push("/login")}
-              className="bg-white border max-md:text-[9px] !p-2 !px-3 border-[#EC583C] !text-[#EC583C]"
-              value="Join or Sign in"
-            />
+            <Link
+              href="/login"
+              className="bg-white border rounded-full max-md:text-[9px] !p-2 !px-3 border-[#EC583C] !text-[#EC583C]"
+            >
+              Join or Sign in
+            </Link>
           </div>
         </div>
       </div>
