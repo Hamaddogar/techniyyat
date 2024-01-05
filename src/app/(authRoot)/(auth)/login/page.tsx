@@ -19,7 +19,10 @@ const page = () => {
           <Input type="email" placeholder="Email Address" />
           <Input type="password" placeholder="Password" />
           <p className="text-[#252530]/70 -mt-1">
-            Forgot Password? <span className="text-[#EC583C]">Reset Now</span>
+            Forgot Password?{" "}
+            <Link href="/reset-password" className="text-[#EC583C]">
+              Reset Now
+            </Link>
           </p>
         </div>
         <div className="w-full mt-5 flex items-center justify-center">
