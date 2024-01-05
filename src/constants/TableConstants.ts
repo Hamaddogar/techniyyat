@@ -1,0 +1,58 @@
+export const tableConstants = [
+  {
+    updateType: "Added",
+    domains: "Infrastuture > Networks > Routers",
+    name: "John Carter",
+    avatar: "/john-carter.png",
+    date: "December 13, 2022 - 9:00 PM",
+  },
+  {
+    updateType: "Added",
+    domains: "Infrastuture > Networks > Routers",
+    name: "John Carter",
+    avatar: "/john-carter.png",
+    date: "December 13, 2022 - 9:00 PM",
+  },
+  {
+    updateType: "Added",
+    domains: "Infrastuture > Networks > Routers",
+    name: "John Carter",
+    avatar: "/john-carter.png",
+    date: "December 13, 2022 - 9:00 PM",
+  },
+  {
+    updateType: "Edited",
+    domains: "Infrastuture > Networks > Routers",
+    name: "John Carter",
+    avatar: "/john-carter.png",
+    date: "December 13, 2022 - 9:00 PM",
+  },
+  {
+    updateType: "Added",
+    domains: "Infrastuture > Networks > Routers",
+    name: "John Carter",
+    avatar: "/john-carter.png",
+    date: "December 13, 2022 - 9:00 PM",
+  },
+  {
+    updateType: "Added",
+    domains: "Infrastuture > Networks > Routers",
+    name: "John Carter",
+    avatar: "/john-carter.png",
+    date: "December 13, 2022 - 9:00 PM",
+  },
+  {
+    updateType: "Added",
+    domains: "Infrastuture > Networks > Routers",
+    name: "John Carter",
+    avatar: "/john-carter.png",
+    date: "December 13, 2022 - 9:00 PM",
+  },
+  {
+    updateType: "Added",
+    domains: "Infrastuture > Networks > Routers",
+    name: "John Carter",
+    avatar: "/john-carter.png",
+    date: "December 13, 2022 - 9:00 PM",
+  },
+];
