@@ -1,45 +1,55 @@
-import { Button, DropDown, Input, TextArea } from "@/components";
-import React from "react";
+"use client";
+import {
+  Button,
+  DropDown,
+  Input,
+  NewSectionSidebar,
+  TextArea,
+} from "@/components";
+import React, { useState } from "react";
 
 const page = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   return (
     <div className="bg-white flex p-7 rounded-xl">
-      <div className="w-[80%] flex mx-auto">
+      <div className="w-full flex-col gap-3 flex mx-auto">
+        <h1 className="text-lg font-medium">Add New Product</h1>
         <div className="w-[30%] flex">
           <img
-            className="w-[200px] object-cover rounded-lg h-[200px]"
+            className="w-[100px] object-cover rounded-lg h-[100px]"
             src="https://images.unsplash.com/photo-1703371169541-7f743764127e?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
         </div>
-        <div className="w-[70%] flex flex-col gap-5">
+        <div className="w-[90%] flex flex-col gap-5">
           <div className="flex gap-5 w-full">
             <Input type="text" className="w-full" placeholder="Product Name" />
-            <DropDown value="Product Type" />
+            <Input type="text" className="w-full" placeholder="Vendor Name" />
+            <Input type="text" className="w-full" placeholder="Website" />
           </div>
           <div className="flex gap-5 w-full">
-            <Input type="text" className="w-full" placeholder="HQ Location" />
-            <DropDown value="Founded Year" />
+            <DropDown value="Vendor domain" />
+            <DropDown value="Sub domain" />
+            <DropDown value="Vendor Technology" />
+            <DropDown value="Vendor Country" />
           </div>
-          <div className="flex gap-5 w-full">
-            <Input
-              type="email"
-              className="w-full"
-              placeholder="Email Address"
-            />
-            <Input type="text" className="w-full" placeholder="Phone Number" />
-          </div>
-          <Input
-            type="text"
-            className="w-full"
-            placeholder="Price Starting From"
-          />
-          <TextArea placeholder="What is price about" />
           <TextArea placeholder="Product Description" />
-          <div className="w-full flex justify-center">
+          <TextArea placeholder="Brief about owners" />
+          <div className="w-full font-semibold flex gap-3">
             <Button value="Create Product" />
+            <Button
+              onClick={() => setIsDrawerOpen(true)}
+              className="bg-[#FDF5F4] !text-[#EC583C] border !border-[#EC583C]"
+              value="Add New Section"
+            />
           </div>
         </div>
       </div>
+      <NewSectionSidebar
+        isDrawerOpen={isDrawerOpen}
+        closeSideDrawer={() => setIsDrawerOpen(false)}
+        openSideDrawer={() => setIsDrawerOpen(true)}
+      />
     </div>
   );
 };

@@ -10,7 +10,8 @@ const Sidebar = () => {
         <Link href="/">
           <img className="w-36  bg-transparent" src="/techniyyat-logo.png" />
         </Link>
-        <CreateNewButton />
+        <CreateNewButton link="/create-new-vendor" name="" />
+
         <div className="flex flex-col gap-7">
           {sidebarConstant.map((item: any) => (
             <SidebarLink

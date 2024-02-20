@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components";
+import { Button, ReviewSubmittedSuccess } from "@/components";
 import { Testimonial } from "@/components/HomeLayout";
 import {
   HeadingAndDesc,
@@ -14,6 +14,7 @@ import { companyCardConstants } from "@/constants/CompanyCard";
 import { subdomainConstants } from "@/constants/SubdomainConstants";
 import { FeaturedProductsLaunching } from "@/sections";
 import { AboutVendor, Reviews, SuggestSection } from "@/sections/ProductPage";
+import Link from "next/link";
 
 import React, { useState } from "react";
 
@@ -25,72 +26,33 @@ const page = () => {
   const openModal = () => {
     setIsOpen(true);
   };
-  const [suggestionIsOpen, setSuggestionIsOpen] = useState(false);
-  const openSuggestion = () => {
-    setSuggestionIsOpen(true);
-  };
-  const closeSuggestion = () => {
-    setSuggestionIsOpen(false);
-  };
-  const [isProductSuggestionOpen, setIsProductSuggestionOpen] = useState(false);
-  const closeProductSuggestion = () => {
-    setIsProductSuggestionOpen(false);
-  };
-  const openProductSuggestion = () => {
-    setIsProductSuggestionOpen(true);
-  };
-  const [isReviewRCMOpen, setIsReviewRCMOpen] = useState(false);
-  const closeReviewRCMModal = () => {
-    setIsReviewRCMOpen(false);
-  };
-  const openReviewRCMModal = () => {
-    setIsReviewRCMOpen(true);
-  };
+  const [submitSucess, setSubmitSucess] = useState(false);
+
   return (
     <div className="relative  ">
       <img className="w-full h-[200px] object-cover " src="/Banner.png" />
       <div className="max-w-[1440px] p-2 mx-auto ">
-        <ProductDetail
-          noSuggestButtons
-          openReviewRCMModal={openReviewRCMModal}
-          openModal={openModal}
-        />
+        <ProductDetail noSuggestButtons />
+        <div className="flex items-center gap-4 text-xl mt-4">
+          <Link
+            className="text-[#EC583C] underline-offset-8 underline "
+            href={"/unregUser/vendors/num"}
+          >
+            Vendors
+          </Link>
+          <Link href={"/unregUser/product/num"}>Products</Link>
+        </div>
         <div className="flex w-full max-md:flex-col gap-5">
           <div className="w-full">
             <div className="mt-16 space-y-10 ">
               <HeadingAndDesc
-                heading="Product Name"
-                desc="Cisco Systems is a US-based publicly traded company, that develops, manufactures and sells hi-tech services and products for various sectors. Through its Israeli subsidiary, Cisco – Isra- el, Cisco Systems is currently involved in the establishment of technological hubs in the occupied the struc- tural dependency of the Palestinian economy on that of Israel."
+                heading="About Vendor"
+                desc="Cisco Systems is a US-based publicly traded company, that develops, manufactures and sells hi-tech services and products for various sectors. Through its Israeli subsidiary, Cisco – Isra- el, Cisco Systems is currently involved in the establishment of technological hubs in the occupied Palestinian territory and in the Syr- ian Golan, as well as, in the Naqab (Negev) region. The company is complicit in Israel’s expanding visual surveillance apparatus in Jerusalem and has won an Israeli Ministry of Defense (IMOD) tender to provide servers and IT support to the Israeli military. Further, through its Israeli subsidiary, Cisco Systems is involved in the emerging Palestin- ian hi-tech sector. This involvement takes the guise of technological development and job creation but in fact, contributes to the struc- tural dependency of the Palestinian economy on that of Israel."
               />
               <HeadingAndDesc
-                heading="Product Specification"
-                desc="Hostwinds provides dependable cloud solutions at a competitive price. Since founded in 2010, our primary compassion has been providing the best customer service and products to worldwide hosting customers. Our professional support remains available to our customers 24/7 and boasts a 99.9999% uptime guarantee. Hostwinds customers can rest assured knowing their hosting remains in dependable hands. Do you have limited space."
+                heading="History Of Ownership"
+                desc="Cisco was founded in December 1984 by Leonard Bosack and Sandy Lerner. In 1990, Cisco went public and its shareholders expanded to include institutional investors and individual shareholders. Over the years, Cisco's shareholder base has continued to grow as the company's market capitalization and shareholder value have increased. The company's stock has been traded on the NASDAQ stock exchange under the ticker symbol CSCO. As of 2021, some of the largest shareholders of Cisco include institutional investors such as The Vanguard Group, BlackRock, and State Street Corporation. Additionally, individual investors and employees who hold stock options and shares as part of their compensation also make up a significant portion of Cisco's shareholder base. The history of Cisco's shareholders reflects the company's growth and success in the technology industry, as well as the evolving landscape of investment and ownership in the stock market."
               />
-            </div>
-            <div className=" mt-6 ">
-              <SuggestSection
-                buttonVal="Suggest New Section"
-                title={"Suggest Section About Vendor"}
-                openSuggestion={openSuggestion}
-              />
-              <SuggestionUnderReview
-                closeSuggestion={closeSuggestion}
-                suggestionIsOpen={suggestionIsOpen}
-              />
-            </div>
-            <div className="mt-8">
-              <h1 className="text-2xl mb-7 font-semibold ">
-                Vendor's other products
-              </h1>
-              <div className="grid md:grid-cols-4  w-full place-items-center grid-cols-2 lg:grid-cols-5 xl:grid-cols-7 gap-3">
-                {subdomainConstants.map((item) => (
-                  <SubdomainCard
-                    href="/domains/domain"
-                    src={item.src}
-                    name={item.name}
-                  />
-                ))}
-              </div>
             </div>
             <div className="mt-8">
               <h1 className="text-xl mb-6 font-semibold">
@@ -107,22 +69,19 @@ const page = () => {
                 ))}
               </div>
             </div>
-            <div className="mt-8">
-              <h1 className="text-xl mb-6 font-semibold">Promoted Vendors</h1>
-              <div className="flex gap-4">
-                {companyCardConstants.map((item) => (
-                  <div
-                    className="p-4 flex items-center justify-center rounded-lg w-[170px] border border-gray-200"
-                    key={item.src}
-                  >
-                    <img className="" src={item.src} />
-                  </div>
-                ))}
-              </div>
+            <div className=" mt-6 ">
+              <SuggestSection
+                buttonVal="Suggest New Section"
+                title={"Suggest Section About Vendor"}
+              />
             </div>
+
             <div className="flex flex-col gap-6 items-center">
               <Reviews />
-              <Button value="Write Review About This Vendor" />
+              <Button
+                onClick={openModal}
+                value="Write Review About This Vendor"
+              />
             </div>
             <FeaturedProductsLaunching />
             <div className=" mx-auto pt-12 mt-5 bg-[#FFF8F9] w-full flex flex-col items-center p-4 gap-8">
@@ -139,14 +98,14 @@ const page = () => {
           </div>
         </div>
       </div>
-      <SubmitReviewDialog closeModal={closeModal} isOpen={isOpen} />
-      <ProductSuggestion
-        isProductSuggestionOpen={isProductSuggestionOpen}
-        closeProductSuggestion={closeProductSuggestion}
+      <SubmitReviewDialog
+        openReviewSuccess={() => setSubmitSucess(true)}
+        closeModal={closeModal}
+        isOpen={isOpen}
       />
-      <ReviewModalRCM
-        closeReviewRCMModal={closeReviewRCMModal}
-        isReviewRCMOpen={isReviewRCMOpen}
+      <ReviewSubmittedSuccess
+        successIsOpen={submitSucess}
+        closeSuccess={() => setSubmitSucess(false)}
       />
     </div>
   );

@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components";
+import { Button, ReviewSubmittedSuccess } from "@/components";
 import { Testimonial } from "@/components/HomeLayout";
 import {
   HeadingAndDesc,
@@ -9,11 +9,14 @@ import {
   SubmitReviewDialog,
   SuggestionUnderReview,
 } from "@/components/ProductPage";
+
 import { SubdomainCard } from "@/components/Subdomain";
+import { SuggestionReview } from "@/components/UnregUser";
 import { companyCardConstants } from "@/constants/CompanyCard";
 import { subdomainConstants } from "@/constants/SubdomainConstants";
 import { FeaturedProductsLaunching } from "@/sections";
 import { AboutVendor, Reviews, SuggestSection } from "@/sections/ProductPage";
+import Link from "next/link";
 
 import React, { useState } from "react";
 
@@ -46,6 +49,7 @@ const page = () => {
   const openReviewRCMModal = () => {
     setIsReviewRCMOpen(true);
   };
+  const [submitSucess, setSubmitSucess] = useState(false);
   return (
     <div className="relative  ">
       <img className="w-full h-[200px] object-cover " src="/Banner.png" />
@@ -53,7 +57,17 @@ const page = () => {
         <ProductDetail
           openReviewRCMModal={openReviewRCMModal}
           openModal={openModal}
+          noSuggestButtons
         />
+        <div className="flex items-center gap-4 text-xl mt-4">
+          <Link href={"/unregUser/vendors/num"}>Vendors</Link>
+          <Link
+            href={"/unregUser/product/num"}
+            className="text-[#EC583C] underline-offset-8 underline "
+          >
+            Products
+          </Link>
+        </div>
         <div className="flex w-full max-md:flex-col gap-5">
           <div className="w-full">
             <div className="mt-16 space-y-10 ">
@@ -70,7 +84,7 @@ const page = () => {
               <SuggestSection
                 buttonVal="Suggest New Section"
                 title={"Suggest Section About Vendor"}
-                openSuggestion={openSuggestion}
+                openSuggestion={openProductSuggestion}
               />
               <SuggestionUnderReview
                 closeSuggestion={closeSuggestion}
@@ -141,7 +155,16 @@ const page = () => {
           </div>
         </div>
       </div>
-      <SubmitReviewDialog closeModal={closeModal} isOpen={isOpen} />
+      <SubmitReviewDialog
+        openReviewSuccess={() => setSubmitSucess(true)}
+        closeModal={closeModal}
+        isOpen={isOpen}
+      />
+
+      <ReviewSubmittedSuccess
+        closeSuccess={() => setSubmitSucess(false)}
+        successIsOpen={submitSucess}
+      />
     </div>
   );
 };

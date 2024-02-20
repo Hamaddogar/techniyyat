@@ -5,10 +5,16 @@ import { Button, DropDown, TextArea } from "..";
 const SubmitReviewDialog = ({
   isOpen,
   closeModal,
+  openReviewSuccess,
 }: {
   isOpen: boolean;
   closeModal: any;
+  openReviewSuccess?: any;
 }) => {
+  const handleSuccess = () => {
+    closeModal();
+    openReviewSuccess();
+  };
   return (
     <div>
       <Transition appear show={isOpen} as={Fragment}>
@@ -48,7 +54,7 @@ const SubmitReviewDialog = ({
                   <DropDown value="Review On" />
                   <TextArea placeholder="Write the Review" />
                   <Button
-                    onClick={closeModal}
+                    onClick={handleSuccess}
                     className="w-full"
                     value="Submit Review"
                   />

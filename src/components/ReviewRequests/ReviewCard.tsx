@@ -25,13 +25,8 @@ const ReviewCard = () => {
         </p>
       </div>
       <div className="w-full flex justify-between">
-        <div className="flex items-center gap-2">
-          <DoneOutlinedIcon className="text-[#65D0BD] border rounded-full p-1 text-[30px] border-[#65D0BD] " />
+        <div className="flex items-end w-full justify-end gap-2">
           <CloseOutlinedIcon className="text-[#EB4335] border rounded-full p-1 text-[30px] border-[#EB4335] " />
-        </div>
-        <div className="flex items-center gap-2">
-          <CreateOutlinedIcon className="text-[#EB4335] border rounded-full p-1 text-[30px] border-[#EB4335] " />
-          <DeleteOutlineOutlinedIcon className="text-white border rounded-full p-1 text-[30px] bg-[#EB4335] " />
         </div>
       </div>
     </div>

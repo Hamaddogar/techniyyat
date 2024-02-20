@@ -13,7 +13,7 @@ const SidebarLink = ({
   link: string;
 }) => {
   const pathname = usePathname();
-  console.log(pathname);
+
   return (
     <Link
       href={link}

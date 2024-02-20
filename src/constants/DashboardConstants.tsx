@@ -1,26 +1,24 @@
 import TakeoutDiningOutlinedIcon from "@mui/icons-material/TakeoutDiningOutlined";
 import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
-import SmsOutlinedIcon from "@mui/icons-material/SmsOutlined";
-import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 export const dashboardBox = [
   {
     icon: TakeoutDiningOutlinedIcon,
-    number: 280,
-    name: "Total Products",
+    number: 8,
+    name: "Total Pending Suggestions",
   },
   {
     icon: StorefrontOutlinedIcon,
     number: 148,
-    name: "Total Vendors",
+    name: "Total Pending TA proposal Requests",
   },
   {
-    icon: SmsOutlinedIcon,
-    number: "190k",
-    name: "Total Reviews",
+    icon: StorefrontOutlinedIcon,
+    number: 148,
+    name: "Pending Product Owner Requests",
   },
   {
-    icon: PeopleAltOutlinedIcon,
-    number: 280,
-    name: "Total Users",
+    icon: StorefrontOutlinedIcon,
+    number: 148,
+    name: "Total Pending Review After TA Review",
   },
 ];

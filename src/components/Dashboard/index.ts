@@ -1,2 +1,4 @@
 import Box from "./Box";
-export { Box };
+import Review from "./Review";
+import Reviews from "./Reviews";
+export { Box, Review, Reviews };

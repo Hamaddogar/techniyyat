@@ -6,7 +6,7 @@ const SuggestSection = ({
   title,
   buttonVal,
 }: {
-  openSuggestion: any;
+  openSuggestion?: any;
   title?: any;
   buttonVal?: string;
 }) => {

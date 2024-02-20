@@ -6,8 +6,8 @@ const ProductDetail = ({
   openReviewRCMModal,
   noSuggestButtons,
 }: {
-  openModal: any;
-  openReviewRCMModal: any;
+  openModal?: any;
+  openReviewRCMModal?: any;
   noSuggestButtons?: boolean;
 }) => {
   return (
